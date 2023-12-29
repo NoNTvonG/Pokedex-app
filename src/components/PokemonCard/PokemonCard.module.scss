@@ -1,68 +1,253 @@
 @import '../../assets/styles/variables.scss';
 
-.card{
-  border-radius: 15px;
-  background: grey;
+.card {
+	border-radius: 15px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+	&.water {
+		background: rgba($eWater, 0.15);
+	}
+	&.dragon {
+		background: rgba($eDragon, 0.15);
+	}
+	&.electric {
+		background: rgba($eElectric, 0.15);
+	}
+	&.fairy {
+		background: rgba($eFairy, 0.15);
+	}
+	&.ghost {
+		background: rgba($eGhost, 0.15);
+	}
+	&.fire {
+		background: rgba($eFire, 0.15);
+	}
+	&.ice {
+		background: rgba($eIce, 0.15);
+	}
+	&.grass {
+		background: rgba($eGrass, 0.15);
+	}
+	&.bug {
+		background: rgba($eBug, 0.15);
+	}
+	&.fighting {
+		background: rgba($eFighting, 0.15);
+	}
+	&.normal {
+		background: rgba($eNormal, 0.15);
+	}
+	&.dark {
+		background: rgba($eDark, 0.15);
+	}
+	&.steel {
+		background: rgba($eSteel, 0.15);
+	}
+	&.rock {
+		background: rgba($eRock, 0.15);
+	}
+	&.psychic {
+		background: rgba($ePsychic, 0.15);
+	}
+	&.ground {
+		background: rgba($eGround, 0.15);
+	}
+	&.poison {
+		background: rgba($ePoison, 0.15);
+	}
+	&.flying {
+		background: rgba($eFlying, 0.15);
+	}
 
-  .card_info{
-    padding: 12px 16px;
+	.card_info {
+		padding: 12px 16px;
 
-    .card_id{
-      color: $cDarkGray;
-      font-size: 12px;
-      font-weight: 600;
-    }
-    .name{
-      color: $cBlack;
-      font-size: 21px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .card_types{
-      display: flex;
-      flex-direction: row;
-      gap: 4px;
+		.card_id {
+			color: $cDarkGray;
+			font-size: 12px;
+			font-weight: 600;
+		}
+		.name {
+			color: $cBlack;
+			font-size: 21px;
+			font-weight: 600;
+			margin-bottom: 8px;
+		}
+		.card_types {
+			display: flex;
+			flex-direction: row;
+			gap: 4px;
 
-      .card_type{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 6px;
-        padding: 3px 6px 3px 3px;
-        background: #B567CE;
-        border-radius: 50px;
+			.card_type {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: 6px;
+				padding: 3px 6px 3px 3px;
+				border-radius: 50px;
 
-        .card_type_icon{
-          height: 20px;
-          width: 20px;
-          border-radius: 100%;
-          background: $cWhite;
-        }
-        .card_type_name{
-          font-size: 11px;
-          font-weight: 500;
-          line-height: 1;
-        }
-      }
-    }
-  }
+				&.water {
+					background: $eWater;
+				}
+				&.dragon {
+					background: $eDragon;
+				}
+				&.electric {
+					background: $eElectric;
+				}
+				&.fairy {
+					background: $eFairy;
+				}
+				&.ghost {
+					background: $eGhost;
+				}
+				&.fire {
+					background: $eFire;
+				}
+				&.ice {
+					background: $eIce;
+				}
+				&.grass {
+					background: $eGrass;
+				}
+				&.bug {
+					background: $eBug;
+				}
+				&.fighting {
+					background: $eFighting;
+				}
+				&.normal {
+					background: $eNormal;
+				}
+				&.dark {
+					background: $eDark;
+				}
+				&.steel {
+					background: $eSteel;
+				}
+				&.rock {
+					background: $eRock;
+				}
+				&.psychic {
+					background: $ePsychic;
+				}
+				&.ground {
+					background: $eGround;
+				}
+				&.poison {
+					background: $ePoison;
+				}
+				&.flying {
+					background: $eFlying;
+				}
 
-  .card_img{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4px 16px;
-    width: 100%;
-    max-width: 126px;
-    height: 100px;
+				.card_type_icon {
+					height: 20px;
+					width: 20px;
+					border-radius: 100%;
+					background: $cWhite;
 
-    img{
-      width: 94px;
-      max-width: fit-content;
-    }
-  }
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					img {
+						width: 100%;
+						max-width: 13px;
+					}
+				}
+				.card_type_name {
+					font-size: 11px;
+					font-weight: 500;
+					line-height: 1;
+				}
+			}
+		}
+	}
+
+	.card_img {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 4px 16px;
+		width: 100%;
+		max-width: 126px;
+		height: 100px;
+		border-radius: 15px;
+
+		&.water {
+			background: $eWater;
+		}
+		&.dragon {
+			background: $eDragon;
+		}
+		&.electric {
+			background: $eElectric;
+		}
+		&.fairy {
+			background: $eFairy;
+		}
+		&.ghost {
+			background: $eGhost;
+		}
+		&.fire {
+			background: $eFire;
+		}
+		&.ice {
+			background: $eIce;
+		}
+		&.grass {
+			background: $eGrass;
+		}
+		&.bug {
+			background: $eBug;
+		}
+		&.fighting {
+			background: $eFighting;
+		}
+		&.normal {
+			background: $eNormal;
+		}
+		&.dark {
+			background: $eDark;
+		}
+		&.steel {
+			background: $eSteel;
+		}
+		&.rock {
+			background: $eRock;
+		}
+		&.psychic {
+			background: $ePsychic;
+		}
+		&.ground {
+			background: $eGround;
+		}
+		&.poison {
+			background: $ePoison;
+		}
+		&.flying {
+			background: $eFlying;
+		}
+
+		img {
+			&.card_img_pokemon {
+				position: relative;
+				width: 94px;
+				max-width: fit-content;
+				z-index: 1;
+			}
+			&.card_img_type {
+				position: absolute;
+				inset: 4px;
+				width: calc(100% - 8px);
+				height: calc(100% - 8px);
+				object-fit: contain;
+				opacity: 0.4;
+			}
+		}
+	}
 }
