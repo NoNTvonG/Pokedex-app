@@ -1,0 +1,68 @@
+@import '../../assets/styles/variables.scss';
+
+.card{
+  border-radius: 15px;
+  background: grey;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .card_info{
+    padding: 12px 16px;
+
+    .card_id{
+      color: $cDarkGray;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .name{
+      color: $cBlack;
+      font-size: 21px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .card_types{
+      display: flex;
+      flex-direction: row;
+      gap: 4px;
+
+      .card_type{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        padding: 3px 6px 3px 3px;
+        background: #B567CE;
+        border-radius: 50px;
+
+        .card_type_icon{
+          height: 20px;
+          width: 20px;
+          border-radius: 100%;
+          background: $cWhite;
+        }
+        .card_type_name{
+          font-size: 11px;
+          font-weight: 500;
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  .card_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 16px;
+    width: 100%;
+    max-width: 126px;
+    height: 100px;
+
+    img{
+      width: 94px;
+      max-width: fit-content;
+    }
+  }
+}
