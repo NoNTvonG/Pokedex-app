@@ -1,4 +1,3 @@
-import '../../assets/styles/variables.scss'
 import style from './PokemonCard.module.scss'
 import { iPokemonData } from '../../types/Pokemon.ts'
 
