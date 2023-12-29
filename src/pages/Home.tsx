@@ -9,11 +9,13 @@ export const Home = () => {
   }, [])
 
   return (
-    <div className='container'>
-      <div className="pokemons-grid">
-        {pokemons.map((pokemon) => (
-          <PokemonCard pokemon={pokemon} key={pokemon.name}/>
-        ))}
+    <div className='home-page'>
+      <div className='container'>
+        <div className="pokemons-grid">
+          {pokemons.map((pokemon) => (
+            <PokemonCard pokemon={pokemon} key={pokemon.name}/>
+          ))}
+        </div>
       </div>
     </div>
   )
