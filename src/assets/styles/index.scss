@@ -25,9 +25,12 @@ ul {
 	list-style: none;
 }
 
+html {
+	background: $cWhite !important;
+}
+
 body {
 	font-family: $fPoppins;
-	background: $cWhite;
 }
 
 .container {
