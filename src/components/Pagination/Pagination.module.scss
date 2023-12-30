@@ -1,0 +1,11 @@
+.pagination {
+	color: black;
+
+	li {
+		background: blue;
+
+		&.active {
+			color: red;
+		}
+	}
+}
