@@ -18,7 +18,7 @@ export const CardType: React.FC<CardTypesProps> = ({ type, name }) => {
   return (
     <li className={`${style.type} ${style[type]}`}>
       <div className={style.type_icon}>
-        {typeIcon !== null ? <img src={typeIcon} alt="" /> : null}
+        {typeIcon !== null ? <img src={typeIcon} alt={type} /> : null}
       </div>
       <p className={style.type_name}>
         {name}
