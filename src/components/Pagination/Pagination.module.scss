@@ -1,11 +1,36 @@
+@import '../../assets/styles/variables.scss';
+
 .pagination {
-	color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 50px;
 
-	li {
-		background: blue;
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: $cWhite;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
 
-		&.active {
-			color: red;
-		}
-	}
+    color: rgba(0, 0, 0, 0.70);
+    font-family: $fPoppins;
+    font-size: 14px;
+    font-weight: 400;
+    user-select: none;
+
+
+    &.parination_item {
+      cursor: pointer;
+    }
+
+    &.active {
+      color: $cWhite;
+      background: rgba(0, 0, 0, 0.70);
+    }
+  }
 }

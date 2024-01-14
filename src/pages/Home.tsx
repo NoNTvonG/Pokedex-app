@@ -1,11 +1,12 @@
-import { useEffect } from 'react'
-import { usePokemonsStore } from '../store/pokemonsStore'
-import { PokemonCard } from '../components/PokemonCard/PokemonCard.tsx'
+import {useEffect} from 'react'
+import {usePokemonsStore} from '../store/pokemonsStore'
+import {PokemonCard} from '../components/PokemonCard/PokemonCard.tsx'
+import {Pagination} from '../components/Pagination/Pagination.tsx'
 
 export const Home = () => {
   const {pokemons, fetchPokemons} = usePokemonsStore(state => state)
   useEffect(() => {
-    fetchPokemons()
+    fetchPokemons(0)
   }, [])
 
   return (
@@ -16,6 +17,8 @@ export const Home = () => {
             <PokemonCard pokemon={pokemon} key={pokemon.name}/>
           ))}
         </div>
+
+        <Pagination/>
       </div>
     </div>
   )

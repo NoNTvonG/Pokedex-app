@@ -1,85 +1,104 @@
 @import '../../assets/styles/variables.scss';
 
 .card_img {
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 4px 16px;
-	width: 100%;
-	max-width: 126px;
-	height: 100px;
-	border-radius: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 16px;
+  width: 100%;
+  max-width: 126px;
+  height: 100px;
+  border-radius: 15px;
 
-	&.water {
-		background: $eWater;
-	}
-	&.dragon {
-		background: $eDragon;
-	}
-	&.electric {
-		background: $eElectric;
-	}
-	&.fairy {
-		background: $eFairy;
-	}
-	&.ghost {
-		background: $eGhost;
-	}
-	&.fire {
-		background: $eFire;
-	}
-	&.ice {
-		background: $eIce;
-	}
-	&.grass {
-		background: $eGrass;
-	}
-	&.bug {
-		background: $eBug;
-	}
-	&.fighting {
-		background: $eFighting;
-	}
-	&.normal {
-		background: $eNormal;
-	}
-	&.dark {
-		background: $eDark;
-	}
-	&.steel {
-		background: $eSteel;
-	}
-	&.rock {
-		background: $eRock;
-	}
-	&.psychic {
-		background: $ePsychic;
-	}
-	&.ground {
-		background: $eGround;
-	}
-	&.poison {
-		background: $ePoison;
-	}
-	&.flying {
-		background: $eFlying;
-	}
+  &.water {
+    background: $eWater;
+  }
 
-	img {
-		&.card_img_pokemon {
-			position: relative;
-			width: 94px;
-			max-width: fit-content;
-			z-index: 1;
-		}
-		&.card_img_type {
-			position: absolute;
-			inset: 4px;
-			width: calc(100% - 8px);
-			height: calc(100% - 8px);
-			object-fit: contain;
-			opacity: 0.4;
-		}
-	}
+  &.dragon {
+    background: $eDragon;
+  }
+
+  &.electric {
+    background: $eElectric;
+  }
+
+  &.fairy {
+    background: $eFairy;
+  }
+
+  &.ghost {
+    background: $eGhost;
+  }
+
+  &.fire {
+    background: $eFire;
+  }
+
+  &.ice {
+    background: $eIce;
+  }
+
+  &.grass {
+    background: $eGrass;
+  }
+
+  &.bug {
+    background: $eBug;
+  }
+
+  &.fighting {
+    background: $eFighting;
+  }
+
+  &.normal {
+    background: $eNormal;
+  }
+
+  &.dark {
+    background: $eDark;
+  }
+
+  &.steel {
+    background: $eSteel;
+  }
+
+  &.rock {
+    background: $eRock;
+  }
+
+  &.psychic {
+    background: $ePsychic;
+  }
+
+  &.ground {
+    background: $eGround;
+  }
+
+  &.poison {
+    background: $ePoison;
+  }
+
+  &.flying {
+    background: $eFlying;
+  }
+
+  img {
+    &.card_img_pokemon {
+      position: relative;
+      width: 94px;
+      max-height: 100px;
+      max-width: fit-content;
+      z-index: 1;
+    }
+
+    &.card_img_type {
+      position: absolute;
+      inset: 4px;
+      width: calc(100% - 8px);
+      height: calc(100% - 8px);
+      object-fit: contain;
+      opacity: 0.4;
+    }
+  }
 }
