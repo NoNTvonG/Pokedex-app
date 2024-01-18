@@ -1,0 +1,34 @@
+@import '../../assets/styles/variables.scss';
+
+.loader {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 26px;
+  width: 150px;
+  padding: 30px 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  .loader_img {
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 24px;
+    height: 24px;
+    animation: ballbns 2s ease-in infinite;
+  }
+}
+
+
+@keyframes ballbns {
+  0% {
+    left: 0;
+    transform: translateX(-100%) rotate(0deg);
+  }
+  100% {
+    left: 100%;
+    transform: translateX(0%) rotate(480deg);
+  }
+}
