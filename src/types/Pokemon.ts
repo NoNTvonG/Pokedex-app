@@ -1,4 +1,5 @@
 export interface iPokemonsStore {
+  isLoaded: boolean,
   count: number
   pokemons: iPokemonData[]
   fetchPokemons: (offset: number) => Promise<void>

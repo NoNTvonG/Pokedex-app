@@ -5,9 +5,12 @@ import {iPokemonsStore} from '../types/Pokemon'
 
 export const usePokemonsStore = create<iPokemonsStore>()(
   devtools(set => ({
+    isLoaded: false,
     count: 0,
     pokemons: [],
     fetchPokemons: async (offset: number = 0) => {
+      set(state => ({...state, isLoaded: true}))
+
       const response = await axios.get(
         `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=50`
       )
@@ -25,6 +28,7 @@ export const usePokemonsStore = create<iPokemonsStore>()(
 
       set(state => ({...state, count: response.data.count}))
       set(state => ({...state, pokemons: pokemonData}))
+      set(state => ({...state, isLoaded: false}))
     },
   }))
 )
