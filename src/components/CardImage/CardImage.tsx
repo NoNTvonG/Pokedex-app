@@ -1,5 +1,5 @@
 import style from './CardImage.module.scss'
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 
 type PokemonCardProps = {
   pokemon_img: string;
@@ -7,7 +7,7 @@ type PokemonCardProps = {
   type: string;
 }
 
-export const CardImage: React.FC<PokemonCardProps> = ({ pokemon_img, name, type }) => {
+export const CardImage: React.FC<PokemonCardProps> = ({pokemon_img, name, type}) => {
   const [imageBG, setImageBG] = useState<string | null>(null);
 
   useEffect(() => {
@@ -18,8 +18,9 @@ export const CardImage: React.FC<PokemonCardProps> = ({ pokemon_img, name, type 
 
   return (
     <div className={`${style.card_img} ${style[type]}`}>
-      <img src={pokemon_img} className={style.card_img_pokemon} alt={name} />
-      {imageBG !== null ? <img src={imageBG} className={style.card_img_type} alt={type} /> : null}
+
+      <img src={pokemon_img} className={style.card_img_pokemon} alt={name}/>
+      {imageBG !== null ? <img src={imageBG} className={style.card_img_type} alt={type}/> : null}
     </div>
   )
 }
