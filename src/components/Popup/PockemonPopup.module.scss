@@ -1,0 +1,269 @@
+@import '../../assets/styles/variables.scss';
+
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba($cBlack, 0.3);
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    background: $cWhite;
+    overflow: hidden;
+
+    .popup_nav {
+      position: relative;
+      padding: 10px 10px 0 10px;
+      z-index: 1;
+
+      .popup_nav__close {
+        position: relative;
+        margin-left: auto;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+
+        &:before, &:after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 18px;
+          height: 2px;
+          border-radius: 5px;
+          background: $cWhite;
+        }
+
+        &:before {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &:after {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+
+    .pokemon_image {
+      position: relative;
+      height: 200px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 20px;
+        width: 350px;
+        height: 350px;
+        border-radius: 100%;
+        transform: translateX(-50%);
+      }
+
+      &.water {
+        &:before {
+          background: linear-gradient(142deg, $eWater 35.77%, rgba($eWater, 0.50) 88.68%);
+        }
+      }
+
+      &.dragon {
+        &:before {
+          background: linear-gradient(142deg, $eDragon 35.77%, rgba($eDragon, 0.50) 88.68%);
+        }
+      }
+
+      &.electric {
+        &:before {
+          background: linear-gradient(142deg, $eElectric 35.77%, rgba($eElectric, 0.50) 88.68%);
+        }
+      }
+
+      &.fairy {
+        &:before {
+          background: linear-gradient(142deg, $eFairy 35.77%, rgba($eFairy, 0.50) 88.68%);
+        }
+      }
+
+      &.ghost {
+        &:before {
+          background: linear-gradient(142deg, $eGhost 35.77%, rgba($eGhost, 0.50) 88.68%);
+        }
+      }
+
+      &.fire {
+        &:before {
+          background: linear-gradient(142deg, $eFire 35.77%, rgba($eFire, 0.50) 88.68%);
+        }
+      }
+
+      &.ice {
+        &:before {
+          background: linear-gradient(142deg, $eIce 35.77%, rgba($eIce, 0.50) 88.68%);
+        }
+      }
+
+      &.grass {
+        &:before {
+          background: linear-gradient(142deg, $eGrass 35.77%, rgba($eGrass, 0.50) 88.68%);
+        }
+      }
+
+      &.bug {
+        &:before {
+          background: linear-gradient(142deg, $eBug 35.77%, rgba($eBug, 0.50) 88.68%);
+        }
+      }
+
+      &.fighting {
+        &:before {
+          background: linear-gradient(142deg, $eFighting 35.77%, rgba($eFighting, 0.50) 88.68%);
+        }
+      }
+
+      &.normal {
+        &:before {
+          background: linear-gradient(142deg, $eNormal 35.77%, rgba($eNormal, 0.50) 88.68%);
+        }
+      }
+
+      &.dark {
+        &:before {
+          background: linear-gradient(142deg, $eDark 35.77%, rgba($eDark, 0.50) 88.68%);
+        }
+      }
+
+      &.steel {
+        &:before {
+          background: linear-gradient(142deg, $eSteel 35.77%, rgba($eSteel, 0.50) 88.68%);
+        }
+      }
+
+      &.rock {
+        &:before {
+          background: linear-gradient(142deg, $eRock 35.77%, rgba($eRock, 0.50) 88.68%);
+        }
+      }
+
+      &.psychic {
+        &:before {
+          background: linear-gradient(142deg, $ePsychic 35.77%, rgba($ePsychic, 0.50) 88.68%);
+        }
+      }
+
+      &.ground {
+        &:before {
+          background: linear-gradient(142deg, $eGround 35.77%, rgba($eGround, 0.50) 88.68%);
+        }
+      }
+
+      &.poison {
+        &:before {
+          background: linear-gradient(142deg, $ePoison 35.77%, rgba($ePoison, 0.50) 88.68%);
+        }
+      }
+
+      &.flying {
+        &:before {
+          background: linear-gradient(142deg, $eFlying 35.77%, rgba($eFlying, 0.50) 88.68%);
+        }
+      }
+
+      .pokemon_image__type {
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+      }
+
+      .pokemon_image__img {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 170px;
+        height: 170px;
+        object-fit: contain;
+      }
+    }
+
+    .pokemon_data {
+      padding: 15px;
+
+      &__name {
+        h2 {
+          color: $cBlack;
+          font-family: $fPoppins;
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+
+        p {
+          color: $cDarkGray;
+          font-family: $fPoppins;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+
+      &__types {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        margin: 15px 0;
+      }
+
+      &__stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+
+        .single_stat {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          &:nth-child(5) {
+            grid-column: span 2;
+          }
+
+          span {
+            color: $cDarkGray;
+            font-family: $fPoppins;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+
+          &__param {
+            border-radius: 15px;
+            border: 1px solid rgba($cBlack, 0.10);
+            padding: 7px;
+
+            p {
+              color: $cBlack;
+              font-family: $fPoppins;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -6,14 +6,14 @@ export interface iPokemonsStore {
 }
 
 export interface iPokemonData {
-  id: number
-  name: string
-  url: string
+  id: number,
+  name: string,
+  url: string,
   types: [
     {
-      slot: number
+      slot: number,
       type: {
-        name: string
+        name: string,
         url: string
       }
     }
@@ -25,11 +25,21 @@ export interface iPokemonData {
     back_shiny: string
     other: {
       showdown: {
-        front_default: string
-        back_default: string
-        front_shiny: string
+        front_default: string,
+        back_default: string,
+        front_shiny: string,
         back_shiny: string
       }
     }
   }
+  stats: [
+    {
+      base_stat: number,
+      stat: {
+        name: string,
+        url: string
+      }
+    }
+  ]
+  weight: number
 }
