@@ -33,7 +33,7 @@ export const PokemonCard: React.FC<PokemonCardProps> = ({pokemon}) => {
             {pokemon.types.map(type => (
               <CardType
                 type={type.type.name}
-                name={pokemon.name}
+                name={type.type.name}
                 key={type.type.name}
               />
             ))}
