@@ -43,3 +43,10 @@ export interface iPokemonData {
   ]
   weight: number
 }
+
+export interface iPokemonSearch {
+  isFetching: boolean,
+  notFound: boolean,
+  pokemon: iPokemonData | null,
+  fetchPokemon: (name: string) => Promise<void>
+}
