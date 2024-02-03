@@ -13,6 +13,7 @@ interface PokemonPopupProps {
 interface PockemonPopupStatProps {
   title: string
   param: number
+  unit: string
 }
 
 export const PockemonPopup: React.FC<PokemonPopupProps> = ({pokemon, onClose}) => {
@@ -73,10 +74,11 @@ export const PockemonPopup: React.FC<PokemonPopupProps> = ({pokemon, onClose}) =
                 <PockemonPopupStatBox
                   title={pokemonStats.stat.name}
                   param={pokemonStats.base_stat}
+                  unit={''}
                   key={pokemonStats.stat.name}
                 />
               ))}
-            <PockemonPopupStatBox title={"weight"} param={pokemon.weight}/>
+            <PockemonPopupStatBox title={"weight"} unit={'kg'} param={pokemon.weight}/>
           </div>
         </div>
       </div>
@@ -84,12 +86,12 @@ export const PockemonPopup: React.FC<PokemonPopupProps> = ({pokemon, onClose}) =
   )
 };
 
-const PockemonPopupStatBox: FC<PockemonPopupStatProps> = ({title, param}) => {
+const PockemonPopupStatBox: FC<PockemonPopupStatProps> = ({title, param, unit}) => {
   return (
     <div className={style.single_stat}>
       <span>{useCapitalizeFirstLetter(title)}</span>
       <div className={style.single_stat__param}>
-        <p>{param / 10} kg</p>
+        <p>{param / 10} {unit}</p>
       </div>
     </div>
   )
