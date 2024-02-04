@@ -1,30 +1,30 @@
-# React + TypeScript + Vite
+# Pokedex App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### React, TypeScript, Axios, Zustand, Swiper, Sass
 
-Currently, two official plugins are available:
+This is a web application developed using the React library.
+The project aims to visualize and display information about Pokémon.
+The application utilizes the [PokeAPI](https://pokeapi.co/) to fetch the latest data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Key Features:
 
-## Expanding the ESLint configuration
+- **Pokémon List**: Immediately upon entering the page, you can view all the Pokémon available.
+- **Pokémon Details**: Upon clicking on a Pokémon, you can view expanded information about it.
+- **Search**: The application allows users to search for Pokémon by name, making it easy to find specific Pokémon.
+- **Filtering**: Users can filter Pokémon by type, allowing them to quickly find Pokémon of a specific type.
+- **Pagination**: To optimize and facilitate practical navigation, pagination has been implemented.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Technologies Used:
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: The web application is developed using the React library, ensuring efficient and dynamic user interface
+  interactions.
+- **Axios**: Utilized for convenient interaction with the [PokeAPI](https://pokeapi.co/) and fetching up-to-date data.
+- **Zustand**: A state management library used to manage the application's state and data, ensuring efficient and
+  effective data management.
+- **Swiper**: A library for creating sliders and carousels, enabling the creation of a dynamic and interactive user
+  interface.
+- **Sass**: Employed to enhance style organization and ease of writing styles, allowing the use of variables and other
+  advanced features.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+![Home page](https://www.romek.dev/_vercel/image?url=/gallery/playground/pokedex/img-1.jpg&w=1536&q=100)
+![Pokemon information](https://www.romek.dev/_vercel/image?url=/gallery/playground/pokedex/img-2.jpg&w=1536&q=100)
