@@ -15,12 +15,16 @@ export const FilterByType = () => {
   }, []);
 
   const getPokemonsByType = (type: string) => {
-    fetchPokemonsByType(type)
-    setActiveType(type)
+    if (activeType != type) {
+      fetchPokemonsByType(type)
+      setActiveType(type)
+    }
   }
   const getAllPokemons = (type: string) => {
-    fetchPokemons(0);
-    setActiveType(type)
+    if (activeType != type) {
+      fetchPokemons(0)
+      setActiveType(type)
+    }
   }
 
   return (
