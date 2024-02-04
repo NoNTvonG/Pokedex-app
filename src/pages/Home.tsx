@@ -4,9 +4,10 @@ import {PokemonCard} from '../components/PokemonCard/PokemonCard.tsx'
 import {Pagination} from '../components/Pagination/Pagination.tsx'
 import {Loader} from "../components/Loader/Loader.tsx";
 import {Search} from "../components/Search/Search.tsx";
+import {FilterByType} from "../components/FilterByType/FilterByType.tsx";
 
 export const Home = () => {
-  const {pokemons, isLoaded, fetchPokemons} = usePokemonsStore(state => state)
+  const {pokemons, isLoaded, isFilteredByType, fetchPokemons} = usePokemonsStore(state => state)
   useEffect(() => {
     fetchPokemons(0)
   }, [])
@@ -15,6 +16,7 @@ export const Home = () => {
     <div className='home-page'>
       <div className='container'>
         <Search/>
+        <FilterByType/>
         <div className="pokemons-grid">
           {isLoaded ?
             <Loader/>
@@ -26,8 +28,11 @@ export const Home = () => {
             </>
           }
         </div>
-
-        <Pagination/>
+        {isFilteredByType ?
+          ''
+          :
+          <Pagination/>
+        }
       </div>
     </div>
   )

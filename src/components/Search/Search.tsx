@@ -25,8 +25,12 @@ export const Search: React.FC = () => {
   return (
     <section id={style.search}>
       <form>
-        <input type='text' name='name' placeholder='Search for Pokémon...'
-               onChange={(e) => setPokemonName(e.target.value)}/>
+        <input
+          type='text'
+          name='name'
+          placeholder='Search for Pokémon...'
+          onChange={(e) => setPokemonName(e.target.value)}
+        />
         <button onClick={searchPokemon}>
           <img src={searchIcon} alt='search'/>
         </button>

@@ -1,8 +1,12 @@
 export interface iPokemonsStore {
-  isLoaded: boolean,
+  isLoaded: boolean
+  isFilteredByType: boolean
   count: number
   pokemons: iPokemonData[]
+  pokemonTypes: iPokemonType[]
   fetchPokemons: (offset: number) => Promise<void>
+  fetchAllTypes: () => Promise<void>
+  fetchPokemonsByType: (type: string) => Promise<void>
 }
 
 export interface iPokemonData {
@@ -49,4 +53,9 @@ export interface iPokemonSearch {
   notFound: boolean,
   pokemon: iPokemonData | null,
   fetchPokemon: (name: string) => Promise<void>
+}
+
+export interface iPokemonType {
+  name: string,
+  url: string
 }
