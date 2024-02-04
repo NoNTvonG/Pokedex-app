@@ -2,71 +2,76 @@
 @import '../../assets/styles/variables.scss';
 
 :root {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-	line-height: 1.5;
-	font-weight: 400;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 
-	color-scheme: light dark;
-	color: rgba(255, 255, 255, 0.87);
-	background-color: #242424;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
 
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
-	list-style: none;
+  list-style: none;
 }
 
 html {
-	background: $cWhite !important;
+  background: $cWhite !important;
 }
 
 body {
-	font-family: $fPoppins;
+  font-family: $fPoppins;
 }
 
 .container {
-	width: 100%;
-	padding-right: 15px;
-	padding-left: 15px;
-	margin-right: auto;
-	margin-left: auto;
+  width: calc(100% - 30px);
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 
-	@media (min-width: 576px) {
-		max-width: 540px;
-	}
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
 
-	@media (min-width: 768px) {
-		max-width: 720px;
-	}
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
 
-	@media (min-width: 992px) {
-		max-width: 960px;
-	}
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
 
-	@media (min-width: 1200px) {
-		max-width: 1140px;
-	}
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
 
-	@media (min-width: 1400px) {
-		max-width: 1320px;
-	}
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
 }
 
 .pokemons-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-	gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+
+  @media (max-width: 575px) {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  }
 }
 
 .home-page {
-	display: flex;
+  //display: flex;
 }

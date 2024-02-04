@@ -100,5 +100,13 @@
       object-fit: contain;
       opacity: 0.4;
     }
+
+    @media (max-width: 575px) {
+      width: 70px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    max-width: 100px;
   }
 }
